@@ -1,0 +1,66 @@
+<div class="popup-overlay">
+    <div class="popup">
+        <div class="popup_header">
+            Edit Contact
+        </div>
+        <form [formGroup]="editContactForm" (ngSubmit)="editContact()">
+            <!-- <div>please fill all the mandatory fields</div> -->
+            <div class="popup_body">
+                <div class="input_container">
+                    <div class="field_label">
+                        First Name *
+                    </div>
+                    <input formControlName="firstName" class="input_field" type="text">
+                </div>
+
+                <div class="input_container">
+                    <div class="field_label">
+                        Last Name *
+                    </div>
+                    <input formControlName="lastName" class="input_field" type="text">
+                </div>
+
+                <div class="input_container">
+                    <div class="field_label">
+                        Email *
+                    </div>
+                    <input formControlName="email" placeholder="email@example.com" class="input_field" type="email">
+                </div>
+
+                <div class="input_container">
+                    <div class="field_label">
+                        Contact *
+                    </div>
+                    <input formControlName="contact" class="input_field" type="number">
+                </div>
+
+                <div class="input_container">
+                    <div class="field_label">
+                        Address
+                    </div>
+                    <textarea formControlName="address" rows="3"
+                        style="border: 1px solid #E5E7EB; width: 88%;"></textarea>
+                </div>
+
+                <div class="input_container">
+                    <div class="field_label">
+                        Birthday
+                    </div>
+                    <input formControlName="birthday" placeholder="dd/mm/yyyy" class="input_field" type="date">
+                </div>
+                <div class="input_container">
+                    <div for="tags" class="field_label">
+                        Tags
+                    </div>
+                    <select formControlName="tags" class="input_field" id="tags">
+                        <option *ngFor="let tag of tags" [ngValue]="tag">{{ tag }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn_container">
+                <button (click)="closePopup()" class="close_btn">Cancel</button>
+                <button type="submit" class="save_btn">Edit Contact</button>
+            </div>
+        </form>
+    </div>
+</div>
