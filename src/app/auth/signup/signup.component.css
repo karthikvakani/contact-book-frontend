@@ -1,0 +1,75 @@
+.add_user {
+    content: url("../../../Assets/add_user.png");
+}
+
+.content {
+    background-color: #F9FAFB;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.main_title {
+    font-size: 30px;
+}
+
+.title {
+    color: #4B5563;
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.login_form {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-left: 50px; */
+}
+
+.input_container {
+    margin-top: 16px;
+}
+
+.input_field {
+    margin-top: 12px;
+    width: 400px;
+    height: 40px;
+    border: 1px solid #D1D5DA;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.body_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin_button {
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    border: none
+}
+
+.sign_up_text {
+    margin-top: 20px;
+    display: flex;
+}
+
+.error_message {
+    font-size: 14px;
+    color: red;
+    margin-top: 4px;
+}
+
