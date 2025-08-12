@@ -1,0 +1,51 @@
+<div class="content">
+    <div class="body_content">
+        <img class="phone_book_icon" alt="Phone Book">
+        
+        <div class="main_title">
+            Welcome Back
+        </div>
+        <div class="title">
+            Sign in to your ContactBook account
+        </div>
+        <div class="login_form">
+            <div class="error_message" *ngIf="is_error">Incorrect Email Id and Password</div>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="input_container">
+                    <div class="field_label">
+                        Email Address
+                    </div>
+                    <input formControlName="email" placeholder="Enter your email" class="input_field">
+                </div>
+                <div class="error_message"
+                    *ngIf="(loginForm.get('email')?.errors && loginForm.controls['email'].touched)"> Enter the Email
+                    address in valid formate</div>
+
+                <div class="input_container">
+                    <div class="field_label">
+                        Password
+                    </div>
+                    <input formControlName="password" type="password" placeholder="Enter your password"
+                        class="input_field">
+                </div>
+                <div class="error_message"
+                    *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.controls['password'].touched">
+                    Enter the password
+                </div>
+
+
+                <button [disabled]="disablesigninbtn" type="submit" class="signin_button">Sign In</button>
+            </form>
+        </div>
+        <div class="sign_up_text">
+            <div style="color:#4B5563">
+                Don't have an account?
+            </div>
+
+            <div (click)="goToSignup()" style="margin-left: 4px; cursor: pointer;">
+                Sign up here
+            </div>
+        </div>
+    </div>
+
+</div>
